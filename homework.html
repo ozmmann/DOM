@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
@@ -16,16 +16,24 @@
             <ul>
                 <li>
                     <a href="http://yandex.ru/" class="popup-link"
+                        id="1"
                         data-title="Переход на внешний ресурс"
                         data-message="Вы уверены, что хотите перейти на '%s'?">Яндекс</a>
                 </li>
                 <li>
                     <a href="http://google.com/" class="popup-link"
+                        id="2"
                         data-title="оу!"
                         data-message="А точно?">Гугл</a>
                 </li>
             </ul>
         </div>
         <script src="homework.js"></script>
+        <script>
+            var links = document.getElementsByClassName('popup-link'), i;
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', _onMouseClick,false);
+            }
+        </script>
     </body>
 </html>
